@@ -16,6 +16,11 @@ This is *not* the official source code. It is at the website above, in zip files
 1. Why we need `bash -c` to get proper substitution: https://stackoverflow.com/a/11158279/4561887
 
 
+# TODO
+
+1. [ ] Get `mkfatimg` to build natively on Linux so that I don't have to use Wine to run it on Linux.
+
+
 # Notes
 
 1. I put a bunch of the archived versions (the most recent 17 versions or so) into the [Archives](Archives) dir, and extracted them using my commands below.
