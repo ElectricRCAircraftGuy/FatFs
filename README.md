@@ -119,3 +119,15 @@ This is *not* the official source code. It is at the website above, in zip files
     mkfatimg.exe
     ```
 
+
+# Build instructions
+
+
+## 1. Windows
+
+todo
+
+
+## 2. Linux
+
+todo
