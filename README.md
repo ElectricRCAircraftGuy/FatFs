@@ -98,7 +98,7 @@ This is *not* the official source code. It is at the website above, in zip files
     # create and edit this new file
     gedit ~/bin/mkfatimg.exe
     ```
-    Now paste the following into it:
+    Now paste the following into it (updating the path as necessary):
     ```bash
     #!/usr/bin/env bash
 
