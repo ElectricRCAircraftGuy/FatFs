@@ -1,4 +1,4 @@
-# FatFs - Generic FAT Filesystem Module
+# ChaN's "FatFs - Generic FAT Filesystem Module"
 
 I am _not_ the author of this! It comes from here: http://elm-chan.org/fsw/ff/00index_e.html.
 
