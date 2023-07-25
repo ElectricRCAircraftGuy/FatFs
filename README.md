@@ -28,6 +28,7 @@ sudo apt install unar
 # 1. https://unix.stackexchange.com/a/489449/114401
 # 1. My answer: https://unix.stackexchange.com/a/751912/114401
 cd Archives
+
 time find . -maxdepth 1 -type f -iname "*.zip" -print0 \
     | xargs -0 -I{} -n 1 -P $(nproc) unar -f "{}"
 
@@ -37,14 +38,23 @@ time find . -maxdepth 1 -type f -iname "*.zip" -print0 \
 # See: 
 # 1. Why we need `bash -c` to get proper substitution:
 # https://stackoverflow.com/a/11158279/4561887
+cd Archives
+
 time find . -mindepth 2 -type f -iname "*.zip" -print0 \
     | xargs -0 -I{} -n 1 -P $(nproc) bash -c 'unar -f "{}" -o "$(dirname "{}")"'
+
+# Check the `sha256sum`s of all .exe files now
+find . -iname "*.exe" | xargs -I{} -n 1 sha256sum {}
+# Example run and output:
+#
+#       FatFs/Archives$ find . -iname "*.exe" | xargs -I{} -n 1 sha256sum {}
+#       a589b6ae6b6e9001b0d7f8a966494822a1ea1b096ff5df33908fc4d7acaae316  ./ff14a/documents/res/mkfatimg/Release/mkfatimg.exe
+#       a589b6ae6b6e9001b0d7f8a966494822a1ea1b096ff5df33908fc4d7acaae316  ./ff14b/documents/res/mkfatimg/Release/mkfatimg.exe
+#       a589b6ae6b6e9001b0d7f8a966494822a1ea1b096ff5df33908fc4d7acaae316  ./ff13c/documents/res/mkfatimg/Release/mkfatimg.exe
+#       a589b6ae6b6e9001b0d7f8a966494822a1ea1b096ff5df33908fc4d7acaae316  ./ff14/documents/res/mkfatimg/Release/mkfatimg.exe
+#       a589b6ae6b6e9001b0d7f8a966494822a1ea1b096ff5df33908fc4d7acaae316  ./ff15/documents/res/mkfatimg/Release/mkfatimg.exe
+#
 ```
 
+It looks like they haven't rebuilt the .exe executable included there in the "Release" dir, as they are all the same. :(
 
-
-
-
-`sha256sum`s of some of the `mkfatimg.exe` files within them:
-
-1. todo
