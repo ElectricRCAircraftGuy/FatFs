@@ -66,6 +66,7 @@ Use `meld` to compare dirs:
 ```bash
 sudo apt install meld
 
+# Example
 meld Archives/ff14b Archives/ff15
 ```
 Double-click on filenames in blue in the GUI meld viewer that opens up to see how those files have changed.
