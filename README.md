@@ -18,6 +18,10 @@ This is *not* the official source code. It is at the website above, in zip files
 
 # Notes
 
+I put a bunch of the archived versions into the [Archives](Archives) dir, and extracted them using my commands below.
+
+Zip file extraction notes.
+
 ```bash
 # Install `unar`
 sudo apt update
