@@ -7,6 +7,11 @@ Archives: http://elm-chan.org/fsw/ff/archives.html
 This is *not* the official source code. It is at the website above, in zip files.
 
 
+# Current revision in the repo root:
+
+[`Nov 06, 2022    FatFs R0.15 (latest release)`](http://elm-chan.org/fsw/ff/archives.html)
+
+
 # References
 
 1. Official FatFs website: http://elm-chan.org/fsw/ff/00index_e.html
