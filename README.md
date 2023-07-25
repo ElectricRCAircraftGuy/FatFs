@@ -7,9 +7,13 @@ Archives: http://elm-chan.org/fsw/ff/archives.html
 This is *not* the official source code. It is at the website above, in zip files.
 
 
-# Current revision in the repo root:
+# In this repo
 
-[`Nov 06, 2022    FatFs R0.15 (latest release)`](http://elm-chan.org/fsw/ff/archives.html)
+1. Current revision herein in my `ElectricRCAircraftGuy/FatFs` repo root:
+
+    [`Nov 06, 2022    FatFs R0.15 (latest release)`](http://elm-chan.org/fsw/ff/archives.html)
+
+1. I have placed this version and many past versions also in the [Archives](Archives) directory in this repo.
 
 
 # References
@@ -34,7 +38,8 @@ This is *not* the official source code. It is at the website above, in zip files
 1. Zip file extraction notes:
 
     ```bash
-    # Install `unar`
+    # Install `unar` to unzip all files. 
+    # See my answer here: https://askubuntu.com/a/1479490/327339
     sudo apt update
     sudo apt install unar
 
