@@ -125,7 +125,7 @@ This is *not* the official source code. It is at the website above, in zip files
         chmod +x ~/bin/mkfatimg.exe
         ```
 
-        Now it is runnable directly like this on Linux!:
+    1. Now it is runnable directly like this on Linux!:
         ```bash
         mkfatimg.exe
         ```
