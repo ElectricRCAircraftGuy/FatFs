@@ -87,42 +87,48 @@ This is *not* the official source code. It is at the website above, in zip files
     ```
     Double-click on filenames in blue in the GUI meld viewer that opens up to see how those files have changed.
 
-1. `mkfatimg.exe` (ex: located here: [documents/res/mkfatimg/Release/mkfatimg.exe](documents/res/mkfatimg/Release/mkfatimg.exe)) is a Windows executable. You can run it in Linux with Wine as follows:
-    ```bash
-    # install wine
-    sudo apt update 
-    sudo apt install wine
+1. `mkfatimg.exe` (ex: located here: [documents/res/mkfatimg/Release/mkfatimg.exe](documents/res/mkfatimg/Release/mkfatimg.exe)) is a Windows executable. You can **run it in Linux with Wine** as follows:
+    1. Option 1: just run this automatic "installer":
+        ```bash
+        ./mkfatimg_linux_install.sh
+        ```
+    
+    1. Option 2: install it manually:
+        ```bash
+        # install wine
+        sudo apt update 
+        sudo apt install wine
 
-    # use it
-    wine path/to/mkfatimg.exe
-    # Ex:
-    wine documents/res/mkfatimg/Release/mkfatimg.exe
-    ```
+        # use it
+        wine path/to/mkfatimg.exe
+        # Ex:
+        wine documents/res/mkfatimg/Release/mkfatimg.exe
+        ```
 
-    To make it runnable on Linux as `mkfatimg.exe` directly, which is useful so your build system can run it on either Windows *or* Linux, for instance, with*out* changing the command in your makefile which calls it, do the following:
+        To make it runnable on Linux as `mkfatimg.exe` directly, which is useful so your build system can run it on either Windows *or* Linux, for instance, with*out* changing the command in your makefile which calls it, do the following:
 
-    ```bash
-    mkdir -p ~/bin
-    . ~/.profile  # this adds ~/bin to your PATH, on a default Ubuntu install
+        ```bash
+        mkdir -p ~/bin
+        . ~/.profile  # this adds ~/bin to your PATH, on a default Ubuntu install
 
-    # create and edit this new file
-    gedit ~/bin/mkfatimg.exe
-    ```
-    Now paste the following into it (updating the path as necessary):
-    ```bash
-    #!/usr/bin/env bash
+        # create and edit this new file
+        gedit ~/bin/mkfatimg.exe
+        ```
+        Now paste the following into it (updating the path as necessary):
+        ```bash
+        #!/usr/bin/env bash
 
-    wine "path/to/mkfatimg.exe" "$@"
-    ```
-    Then make it executable:
-    ```bash
-    chmod +x ~/bin/mkfatimg.exe
-    ```
+        wine "path/to/mkfatimg.exe" "$@"
+        ```
+        Then make it executable:
+        ```bash
+        chmod +x ~/bin/mkfatimg.exe
+        ```
 
-    Now it is runnable directly like this on Linux!:
-    ```bash
-    mkfatimg.exe
-    ```
+        Now it is runnable directly like this on Linux!:
+        ```bash
+        mkfatimg.exe
+        ```
 
 
 # Build instructions
